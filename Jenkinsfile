@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Build the code using docker build image"
-                sh "docker-compose build"
+                sh "docker build -t node:mongo ."
                 echo "Build Completed"
             }
         }
