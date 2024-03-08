@@ -24,6 +24,17 @@ app.get('/health-check', (req, res) => {
     )
 })
 
+app.post('/health-check', (req, res) => {
+    console.log('health-check api requested and respose sended successfully')
+    res.json(
+        {
+            status: 200,
+            message: 'Health check api working'
+        }
+    )
+})
+
+
 app.post('/users', async (req, res) => {
     const { name, email, password } = req.body
 
